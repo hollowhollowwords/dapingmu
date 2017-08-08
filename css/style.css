@@ -1,0 +1,209 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  font-family: "微软雅黑";
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: url("../img/bg_box.jpg");
+}
+.wrapper .centerDiv {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+.wrapper .centerDiv .top {
+  width: 100%;
+  height: 25%;
+}
+.wrapper .centerDiv .top .title {
+  float: left;
+}
+.wrapper .centerDiv .top .title .toptitle {
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+.wrapper .centerDiv .top .title .small-title {
+  font-size: 14px;
+  color: #999999;
+  padding-top: 5px;
+}
+.wrapper .centerDiv .top .topLogo {
+  float: right;
+  width: 157px;
+  height: 60px;
+}
+.wrapper .centerDiv .top .topLogo img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .centerDiv .top .totalLit {
+  width: 100%;
+  float: left;
+}
+.wrapper .centerDiv .top .totalLit .list {
+  width: 25%;
+  float: left;
+  padding-right: 84px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.wrapper .centerDiv .top .totalLit .list .list-title {
+  font-size: 16px;
+  color: #ffffff;
+  border-bottom: 2px solid #284766;
+  padding-bottom: 12px;
+}
+.wrapper .centerDiv .top .totalLit .list .list-num span {
+  color: #ffffff;
+  font-size: 20px;
+}
+.wrapper .centerDiv .top .totalLit .list .list-sp span {
+  color: blue;
+}
+.wrapper .centerDiv .top .totalLit .list .list-sp span.home {
+  font-size: 10px;
+}
+.wrapper .bootom {
+  width: 100%;
+  height: 75%;
+}
+.wrapper .bootom .b-map {
+  width: 75%;
+  height: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  float: left;
+  display: inline-block;
+  color: #ffffff;
+}
+.wrapper .bootom .b-map .b-title {
+  width: 100%;
+  height: 8%;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-bottom: 2px solid #284766;
+  padding-bottom: 12px;
+}
+.wrapper .bootom .b-map .b-content {
+  width: 100%;
+  height: 92%;
+}
+.wrapper .bootom .b-map .b-content .b-list {
+  width: 33.33%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+.wrapper .bootom .b-map .b-content .b-list .provice {
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+.wrapper .bootom .b-map .b-content .b-list ul {
+  height: 90%;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li {
+  width: 100%;
+  height: 10%;
+  border-bottom: 2px solid #284766;
+  box-sizing: border-box;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li:last-child {
+  border: 0;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li div {
+  display: inline-block;
+  float: left;
+  text-align: left;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .area {
+  width: 50%;
+  font-size: 14px;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .num {
+  width: 15%;
+  font-size: 20px;
+  text-align: right;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .danwei {
+  font-size: 16px;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 10px;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .blue {
+  background-color: blue;
+}
+.wrapper .bootom .b-map .b-content .b-list ul li .red {
+  background-color: red;
+}
+.wrapper .bootom .b-map .b-content .map2 {
+  width: 66.67%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  background-color: blanchedalmond;
+}
+.wrapper .bootom .b-body {
+  width: 25%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  font-size: 20px;
+}
+.wrapper .bootom .b-body div {
+  display: inline-block;
+  float: left;
+}
+.wrapper .bootom .b-body .bar {
+  height: 56%;
+  width: 100%;
+  border: 2px solid #201935;
+  box-sizing: border-box;
+  background-color: rgba(22, 16, 36, 0.8);
+  margin-bottom: 4%;
+}
+.wrapper .bootom .b-body .bar div {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .bootom .b-body .line {
+  height: 38%;
+  width: 100%;
+  border: 2px solid #201935;
+  box-sizing: border-box;
+  background-color: rgba(22, 16, 36, 0.8);
+  margin-bottom: 2%;
+}
+.wrapper .bootom .b-body .line div {
+  width: 100%;
+  height: 100%;
+}
+.wrapper .bootom .b-body .bar .common,
+.wrapper .bootom .b-body .line .common {
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  color: #fff;
+  text-align: center;
+  margin: 20% auto;
+  display: none;
+}

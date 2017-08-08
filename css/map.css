@@ -1,0 +1,114 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/bg_box.jpg);
+}
+.wrapper {
+  overflow: hidden;
+}
+.map {
+  width: 512px;
+  height: 923px;
+  background-image: url(../img/map_bg.png);
+  background-size: 512px 923px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: fixed;
+  top: 3%;
+  left: 24%;
+}
+.map .circle {
+  cursor: pointer;
+  color: #fdffcb;
+  font-size: 12px;
+  position: relative;
+}
+.map .circle .name {
+  display: inline-block;
+  position: absolute;
+  cursor: default;
+}
+.map .circle .name.name1 {
+  left: 317px;
+  top: 157px;
+}
+.map .circle .name.name2 {
+  left: 260px;
+  top: 345px;
+}
+.map .circle .name.name3 {
+  left: 123px;
+  top: 510px;
+}
+.map .circle .name.name4 {
+  left: 96px;
+  top: 732px;
+}
+.map .circle .name.name5 {
+  left: 370px;
+  top: 487px;
+}
+.map .circle .name.name6 {
+  left: 422px;
+  top: 643px;
+}
+.map .circle .name.name7 {
+  left: 333px;
+  top: 715px;
+}
+.map .circle .name.name8 {
+  left: 292px;
+  top: 565px;
+}
+.map .circle .name.name9 {
+  left: 315px;
+  top: 613px;
+}
+.map .circle .name.name10 {
+  left: 326px;
+  top: 643px;
+}
+.map .circle .name.name11 {
+  left: 371px;
+  top: 624px;
+}
+.map .circle .name.name12 {
+  left: 351px;
+  top: 585px;
+}
+.map .circle .name.name13 {
+  left: 383px;
+  top: 559px;
+}
+.map .circle .name.name14 {
+  left: 244px;
+  top: 676px;
+}
+.map .circle .pos {
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/circle.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  display: inline-block;
+  cursor: default;
+}
+.map .circle .pos.red {
+  background-image: url(../img/red.png);
+}
+.map .circle .poss.red {
+  background-image: url(../img/red.png);
+}
+.map .circle .poss {
+  width: 10px;
+  height: 10px;
+  background-image: url(../img/circle.png);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  display: inline-block;
+  cursor: default;
+}

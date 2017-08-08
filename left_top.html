@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/part1.css"/>
+
+	<body>
+		<div class="cartogram">
+			<div class="cartogram_title">
+				<div class="title_top clearall">交易规模数据<span></span></div>
+				<div class="title_bottom">智慧安鲜大数据中心</div>
+			</div>
+			<div class="cartogram_data">
+				<div class="data_title clearall">
+					<span>当日销售额（元）</span>
+					<span>环比</span>
+					<span>年销售额</span>
+				</div>
+				<div class="data_area clearall">
+					<span class="daysales"></span>
+					<span class="circle"></span>
+					<span class="yearssales"></span>
+				</div>
+			</div>
+			<div id="main" class="mainchart"></div>
+		</div>
+		
+		
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+	<script src="./js/echarts.min.js"></script>
+<script>
+	var myChart = echarts.init(document.getElementById('main'));
+	
+	var page = {
+		main:function(){
+			$.ajax({
+				url:"http://farm.tnktech.cn/WisdomFarmCenter/MobileService.do?transaction",
+				type:"get",
+				dataType:"jsonp",
+				jsonp:"callback",
+		//		data:{
+		//			
+		//		},
+				success:function(data){
+						
+						if(data.code==1000){
+							echart1(data.data);
+						};
+						if(data.code==1001){
+							$(".mainchart").html("<div style='text-align: center; padding-top: 30px; color: #fff; font-weight: bold; font-size: 30px;'>暂无数据</div>");
+						}
+				},
+				error:function(){
+					$(".mainchart").html("<div style='text-align: center; padding-top: 30px; color: #fff; font-weight: bold; font-size: 30px;'>网络错误</div>");
+				}
+				
+			});
+			function echart1(data){
+		    	myChart.setOption(option = {
+			        title: {
+			            text: ''
+			        },
+			        textStyle:{color:"#fff"},
+			        tooltip: {
+			        	textStyle:{color:"#fff"},
+			            trigger: 'axis'
+			        },
+			        grid:{
+			        	left:"80px"
+			        },
+			        xAxis: {
+			            data: data.map(function (item) {
+			                return item[0];
+			            }),
+			            axisLabel: {        
+                            show: true,
+                            textStyle: {
+                                color: '#fff',
+                                fontSize:'16'
+                            }
+                        }
+			        },
+			        yAxis: {
+			        	name:"月销售额（元）",
+			            splitLine: {
+			                show: false
+			            },
+			            nameTextStyle:{
+			            	fontSize:14
+			            },
+			            axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#fff',
+                                fontSize:'16'
+                            }
+                        }
+			        },
+			        series: {
+			            name: '月销售额（元）',
+			            type: 'line',
+			            data: data.map(function (item) {
+			                return item[1];
+			            }),
+			            itemStyle : {  
+			                normal : {  
+			                    color:'#0b48a3',  
+			                    lineStyle:{  
+			                        color:'#0b48a3'  
+			                    }  
+			                }  
+			            },  
+			            
+					},
+			        dataZoom: [{
+			            startValue: data[0][0],
+			            handleSize:"100%",
+//			            start: 0,
+//			            end:100,
+			            textStyle: {color:"#fff"},
+			            bottom:0
+			            
+			        }, {
+			            type: 'inside'
+			        }]
+			        
+			    });
+			}
+		},
+		maindata:function(t){
+			$.ajax({
+				url:"http://farm.tnktech.cn/WisdomFarmCenter/MobileService.do?transactionData",
+				type:"get",
+				dataType:"jsonp",
+				jsonp:"callback",
+				data:{time:"2017-08-02"},
+				success:function(data){
+					
+						$(".yearssales").empty();
+						$(".daysales").empty();
+						$(".circle").empty();
+						addData(data);
+				},
+				error:function(){
+					$(".yearssales").text("网络错误");
+					$(".daysales").text("网络错误");
+					$(".circle").text("网络错误");
+				}
+			});
+			function addData(d){
+				
+				$(".yearssales").text(d.moneyzong);
+				$(".daysales").text(d.taday);
+				$(".circle").text(d.Ring);
+			}
+		}
+		
+	}
+	var nowdate = new Date();
+	nowdate.setTime(nowdate.getTime()-24*60*60*1000);
+    var newmonth = nowdate.getMonth()+1;
+    var nowtime = nowdate.getFullYear()+"年"+newmonth+"月"+nowdate.getDate()+"日";
+    var nTime = nowdate.getFullYear()+"-"+newmonth+"-"+nowdate.getDate();
+    function getNowFormatDate(){ 
+           var day = new Date(); 
+           day.setTime(day.getTime()-24*60*60*1000);
+           var Year = 0; 
+           var Month = 0; 
+           var Day = 0; 
+           var CurrentDate = ""; 
+           //初始化时间 
+           //Year       = day.getYear();//有火狐下2008年显示108的bug 
+           Year       = day.getFullYear();//ie火狐下都可以 
+           Month      = day.getMonth()+1; 
+           Day        = day.getDate(); 
+           CurrentDate += Year + "-"; 
+           if (Month >= 10 ) 
+           { 
+            CurrentDate += Month + "-"; 
+           } 
+           else
+           { 
+            CurrentDate += "0" + Month + "-"; 
+           } 
+           if (Day >= 10 ) 
+           { 
+            CurrentDate += Day ; 
+           } 
+           else
+           { 
+            CurrentDate += "0" + Day ; 
+           } 
+
+           return CurrentDate; 
+    };
+    var nTime = getNowFormatDate();
+	page.main();
+	page.maindata(nTime);
+    $(".title_top").children("span").text(nowtime);
+
+	
+	
+</script>
+</html>

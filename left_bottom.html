@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="./css/part1.css"/>
+
+	<body>
+		<div class="cartogram2">
+			<div class="cartogram2_title clearall">
+				<div class="title_top">问题发现率<span></span></div>
+				<div class="title_bottom">智慧安鲜大数据中心</div>
+			</div>
+			<div id="main2" class="mainchart2"></div>
+		</div>
+		
+	</body>
+	<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.js"></script>
+	<script src="./js/echarts.min.js"></script>
+<script>
+	
+	var myChart2 = echarts.init(document.getElementById('main2'));
+	var page = {
+		
+		main2:function(){
+			$.ajax({
+				url:"http://farm.tnktech.cn/WisdomFarmCenter/disqualificationReasonsController.do?getfault",
+				type:"get",
+				dataType:"jsonp",
+				jsonp:"callback",
+				data:{},
+				success:function(data){
+					if(data.code==1000){
+						addmain2data(data.data);
+					};
+					if(data.code==1001){
+						$(".mainchart2").html("<div style='text-align: center; padding-top: 30px; color: #fff; font-weight: bold; font-size: 30px;'>暂无数据</div>");
+					}
+				},
+				error:function(){
+					$(".mainchart2").html("<div style='text-align: center; padding-top: 30px; color: #fff; font-weight: bold; font-size: 30px;'>请求失败</div>");
+				},
+				error:function(){
+					alert(1);
+				}
+			});
+			function sub(f,d){
+					return d[f].problemtime.substring(0,4);
+			};
+			function addmain2data(d){
+				var len = parseInt(d.length)-1;
+				var subf = sub(len,d);
+				var subl = sub(0,d);
+				if(subf == subl){
+					$(".title_top").children("span").text(subf)
+				}else{
+					$(".title_top").children("span").text(subl + "-" + subf);
+				};
+				
+				myChart2.setOption(option = {
+						textStyle:{color:"#fff"},
+					    tooltip: {
+					        trigger: 'axis',
+					        axisPointer: {
+					            type: 'cross',
+					            crossStyle: {
+					                color: '#999'
+					            }
+					        }
+					    },
+					    grid:{
+				        	left:"55px"
+				        },
+					    legend: {
+					        data:['农残超标','兽残超标','添加剂超标','总和'],
+					        textStyle:{
+					        	color:"#fff"
+					        },
+					        left:"140"
+					    },
+					    xAxis: [
+					        {
+					            type: 'category',
+					            data: d.map(function(item){
+					            	return item.problemtime;
+					            }),
+					            axisPointer: {
+					                type: 'shadow'
+					            },
+					            axisLabel: {
+		                            show: true,
+		                            textStyle: {
+		                                color: '#fff',
+		                                fontSize:'16'
+		                            }
+		                        }
+					        }
+					    ],
+					    yAxis: [
+					        {
+					            type: 'value',
+					            name: '发现数量',
+					            min: 0,
+					            max: 30,
+					            interval: 5,
+					            nameTextStyle:{
+					            	fontSize:16,
+					            },
+					            nameGap:41,
+					            axisLabel: {
+					                formatter: '{value}',
+					                textStyle: {
+		                                color: '#fff',
+		                                fontSize:'16'
+		                            }
+					            },
+					            splitLine:{
+					            	lineStyle:{
+					            		color:"#3d3745"
+					            	}
+					            }
+					        }
+					    ],
+					    series: [
+					        {
+					            name:'兽残超标',
+					            type:'bar',
+					            data:d.map(function(item){
+					            	return item.out2;
+					            }),
+					            itemStyle:{
+					            	normal:{
+					            		color:"#eb6e58"
+					            	}
+					            },
+					            	
+					        },
+					        {
+					            name:'添加剂超标',
+					            type:'bar',
+					            data:d.map(function(item){
+					            	return item.out3;
+					            }),
+					            itemStyle:{
+					            	normal:{
+					            		color:"#0c64df"
+					            	}
+					            },
+					        },
+					        {
+					          	name:'农残超标',
+					            type:'bar',
+					            data:d.map(function(item){
+					            	return item.out1;
+					            }),
+					            itemStyle:{
+					            	normal:{
+					            		color:"#e0de33"
+					            	}
+					            },
+					        },
+					        {
+					            name:'总和',
+					            type:'line',
+					            data:d.map(function(item){
+					            	return item.addresult;
+					            }),
+					            itemStyle:{
+					            	normal:{
+					            		color:"#fff"
+					            	}
+					            },
+					        }
+					    ]
+					
+				})
+
+
+			}
+		}
+	}
+	
+    page.main2();
+
+	
+	
+</script>
+</html>

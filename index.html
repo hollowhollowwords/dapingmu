@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>溯源数据</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="http://www.zhihuianxian.com/WisdomFarmCenter/plug-in/wisdofarmcenterjs/images/index.ico">
+
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/center.css">
+	<link rel="stylesheet" type="text/css" href="./css/map.css">
+</head>
+<body>
+<div class="wrapper">
+	<!-- 中心区域 -->
+	<div class="centerDiv">
+		<!-- top -->
+		<div class="top">
+			<!-- top-title -->
+			<div class="title">
+				<div class="toptitle">发展规模</div>
+				<div class="small-title">智慧安鲜大数据中心</div>
+			</div>
+			<!-- top-logo -->
+			<div class="topLogo">
+				<img src="img/logo.png">
+			</div>
+			<!-- toplist -->
+			<div class="totalLit">
+				<div class="list">
+					<div class="list-title">市场总数</div>
+					<div class="list-num list-sp"><span  id="marketNum"></span><span class="home">家</span></div>
+				</div>
+				<div class="list">
+					<div class="list-title">商户总量</div>
+					<div class="list-num"><span  id="clientNum"></span></div>
+				</div>
+				<div class="list-special">
+					<!-- my:12    other:22 -->
+				</div>
+				<div class="list">
+					<div class="list-title">日客流量</div>
+					<div class="list-num"><span  id="todayNum"></span></div>
+				</div>
+				<div class="list">
+					<div class="list-title">日检验量</div>
+					<div class="list-num"><span  id="checkNum"></span></div>
+				</div>
+			</div>
+		</div>
+		<!-- 市场显示区-->
+		<div class="bootom">
+		   <!-- 市场列表 -->
+			<div class="b-map">
+				<div class="b-title" id="totalTitle">
+					沈阳市市场分布图
+				</div>
+				<div class="b-content">	
+				  <!-- 所属城市 -->
+				<div class="provice" id="provice">
+				沈阳市
+				</div>
+				<div class="b-list">
+					<!-- 市区列表1 -->
+					<ul id="margketList">
+						<!-- 模版 -->
+							<!-- <li><div class="area">苏家屯区</div><div class="num" >176</span><span class="danwei">家</span></div><div class="point blue"></div></li>	-->
+							<div class="empty">暂无数据</div>
+					</ul>
+				</div>
+				<!-- 检验信息地图效果 -->
+				<div class="map">
+					<div class="circle circle1">
+						<span class="name name1">康平县</span>
+					</div>
+					<div class="circle circle2">
+						<span class="name name2">法库县</span>
+					</div>
+					<div class="circle circle3">
+						<span class="name name3">新民市</span>
+					</div>
+					<div class="circle circle4">
+						<span class="name name4">辽中区</span>
+					</div>
+					<div class="circle circle5">
+						<span class="name name5">沈北新区</span>
+					</div>
+					<div class="circle circle6">
+						<span class="name name6">浑南区</span>
+					</div>
+					<div class="circle circle7">
+						<span class="name name7">苏家屯区</span>
+					</div>
+					<div class="circle circle8">
+						<span class="name name8">于洪区</span>
+					</div>
+					<div class="circle circle9">
+						<span class="name name9">铁西区</span>
+					</div>
+					<div class="circle circle10">
+						<span class="name name10">和平区</span>
+					</div>
+					<div class="circle circle11">
+						<span class="name name11">沈河区</span>
+					</div>
+					<div class="circle circle12">
+						<span class="name name12">皇姑区</span>
+					</div>
+					<div class="circle circle13">
+						<span class="name name13">大东区</span>
+					</div>
+					<div class="circle circle14">
+						<span class="name name14">经开区</span>
+					</div>
+				</div>
+				
+				<div class="b-list b-list-right">
+				<!-- 市区列表2 -->
+					<ul id="margketList2">
+						<!-- 模版 -->
+							<!-- <li><div class="area">苏家屯区</div><div class="num" >176</span><span class="danwei">家</span></div><div class="point blue"></div></li> -->
+
+					</ul>	
+				</div>
+			</div>
+			</div>
+			<!-- 市场图表 -->
+			<div class="b-body">
+				<!-- 检测类别分布-饼 -->
+				<div class="bar">
+					<div id="barChart"></div>
+					<div class="common">暂无数据</div>
+				</div>
+				<!-- 检测合格率-折 -->
+				<div class="line">
+					<div id="lineChart"></div>
+					<div class="common">暂无数据</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+
+
+	<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/center.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+</body>
+</html>

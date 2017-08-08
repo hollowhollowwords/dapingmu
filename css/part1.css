@@ -1,0 +1,117 @@
+.clearall{
+	zoom: 1;
+}
+.clearall:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0px;
+}
+html{width: 100%;
+	height: 100%;
+}
+body{
+	margin: 0;
+	padding:30px 0 0 0 ;
+	width: 100%;height: 100%;
+	font-family: "微软雅黑";
+	background: url(../img/bg_box.jpg);
+	box-sizing: border-box;
+}
+.cartogram{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.cartogram .cartogram_title{
+	height: 20%;
+	width: 100%;
+}
+.cartogram .cartogram_data{
+	height: 13%;
+	width: 100%;
+}
+.cartogram .cartogram_title .title_top{
+	color: #fff;
+	
+	font-size: 24px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+}
+.cartogram .cartogram_title .title_top span{
+	float: right;
+}
+.cartogram .cartogram_title .title_bottom{
+	box-sizing: border-box;
+	padding-left: 20px;
+	color: #999999;
+	font-size: 16px;
+}
+.cartogram2{
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.cartogram .mainchart{
+	width: 100%;
+	height: 60%;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+.cartogram2 .mainchart2{
+	width: 100%;
+	height: 70%;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+.cartogram .cartogram_data .data_title{
+	padding-left: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	
+}
+.cartogram .cartogram_data .data_title span{
+	font-size: 16px;
+	display: block;
+	float: left;
+	width: 33.33%;
+	color: #fff;
+}
+.cartogram .cartogram_data .data_area{
+	padding-left: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	
+}
+.cartogram .cartogram_data .data_area span{
+	font-size: 40px;
+	font-weight: bold;
+	display: block;
+	float: left;
+	width: 33.33%;
+	color: #fff;
+}
+.cartogram2 .cartogram2_title{
+	height: 20%;
+	width: 100%;
+}
+.cartogram2 .cartogram2_title .title_top{
+	font-size: 24px;
+	color: #fff;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 17px;
+}
+.cartogram2 .cartogram2_title .title_bottom{
+	font-size: 16px;
+	color: #999999;
+	box-sizing: border-box;
+	padding-left: 20px;
+}
+.cartogram2 .cartogram2_title .title_top span{
+	float: right;
+}

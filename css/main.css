@@ -1,0 +1,383 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+  font-size: 62.5%;
+}
+body {
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.right_module {
+  height: 100%;
+  background-image: url(../img/bg_box.jpg);
+}
+.right_module .top_module {
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  box-sizing: border-box;
+  background-image: url(../img/bg_box.jpg);
+}
+.right_module .top_module .test_data {
+  width: 64.66%;
+  height: 100%;
+  float: left;
+  margin-right: 2%;
+  position: relative;
+}
+.right_module .top_module .test_data .accumulative_detection {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ffffff;
+  text-align: right;
+}
+.right_module .top_module .test_data .accumulative_detection .name {
+  font-size: 1.8rem;
+}
+.right_module .top_module .test_data .accumulative_detection .number {
+  font-size: 4.5rem;
+}
+.right_module .top_module .test_data .word_data {
+  height: 50%;
+  width: 100%;
+}
+.right_module .top_module .test_data .word_data .title {
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+}
+.right_module .top_module .test_data .word_data .sub_title {
+  font-size: 1.8rem;
+  color: #999999;
+  margin-bottom: 5rem;
+}
+.right_module .top_module .test_data .word_data .data_today {
+  width: 100%;
+  height: 15rem;
+}
+.right_module .top_module .test_data .word_data .data_today .title {
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper {
+  width: 100%;
+  height: 100%;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .data_list {
+  display: inline-block;
+  width: 70%;
+  box-sizing: border-box;
+  border-right: 2px solid #56505d;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .data_list .data_item {
+  float: left;
+  width: 33.33%;
+  color: #ffffff;
+  text-align: left;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .data_list .data_item .number {
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .data_list .data_item .name {
+  font-size: 1.8rem;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .qualified_rate {
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  position: relative;
+  top: -4rem;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .qualified_rate .qualified_rate_wrapper {
+  width: 100%;
+  height: 100%;
+}
+.right_module .top_module .test_data .word_data .data_today .data_wrapper .qualified_rate .text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.right_module .top_module .test_data .data_chart {
+  height: 50%;
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection {
+  width: 33.33%;
+  height: 100%;
+  float: left;
+  border: 2px solid #2e2749;
+  box-sizing: border-box;
+  padding: 0.5%;
+}
+.right_module .top_module .abnormal_detection .top_detection {
+  background-color: #231544;
+  padding: 3% 2.5% 1% 2.5%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .title {
+  color: #a1c3f4;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .the_number {
+  font-size: 3.6rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .inspection_category {
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .inspection_category .name {
+  float: left;
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+.right_module .top_module .abnormal_detection .top_detection .inspection_category .desc {
+  float: right;
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+.right_module .top_module .abnormal_detection .top_detection .inspection_category .desc.unqualified {
+  color: #d30309;
+}
+.right_module .top_module .abnormal_detection .top_detection .name_desc {
+  margin-bottom: 3rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .name_desc .name {
+  font-size: 1.4rem;
+  color: #a1c3f4;
+  margin-bottom: 1.2rem;
+}
+.right_module .top_module .abnormal_detection .top_detection .name_desc .desc {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.right_module .top_module .abnormal_detection .top_detection .name_desc.tester {
+  position: absolute;
+  bottom: 0;
+  right: 2%;
+}
+.right_module .top_module .abnormal_detection .detection_table {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table thead {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table thead tr {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table thead tr td {
+  width: 25%;
+  height: 3.5rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.right_module .top_module .abnormal_detection .detection_table table tbody {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table tbody .no_data {
+  width: 100%;
+  height: 4rem;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 2rem;
+}
+.right_module .top_module .abnormal_detection .detection_table table tbody tr {
+  width: 100%;
+}
+.right_module .top_module .abnormal_detection .detection_table table tbody tr td {
+  width: 25%;
+  height: 3rem;
+  color: #ffffff;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.right_module .top_module .abnormal_detection .detection_table table tbody tr td.unqualified {
+  color: #d30309;
+}
+.right_module .bottom_module {
+  height: 100%;
+  width: 100%;
+  padding: 1%;
+  box-sizing: border-box;
+  background-image: url(../img/bg_box.jpg);
+}
+.right_module .bottom_module .traceability_data {
+  width: 20%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.right_module .bottom_module .traceability_data .data_left {
+  width: 100%;
+  height: 100%;
+}
+.right_module .bottom_module .traceability_data .data_left .title {
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+}
+.right_module .bottom_module .traceability_data .data_left .sub_title {
+  font-size: 1.8rem;
+  color: #999999;
+  margin-bottom: 5rem;
+}
+.right_module .bottom_module .traceability_data .data_left .accumulated_data {
+  margin-bottom: 4.5rem;
+}
+.right_module .bottom_module .traceability_data .data_left .accumulated_data .name {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+.right_module .bottom_module .traceability_data .data_left .accumulated_data .number {
+  font-size: 3.6rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .class_title {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item {
+  margin-bottom: 4rem;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item.fruits .data_line {
+  background-color: #eb6e58;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item.vegetables .data_line {
+  background-color: #0c64df;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item.meat .data_line {
+  background-color: #f7d667;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item.seafood .data_line {
+  background-color: #9ab6da;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item.botargo .data_line {
+  background-color: #9a4333;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item .name_word {
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item .name_word .name {
+  font-size: 1.8rem;
+  color: #a1c3f4;
+  float: left;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item .name_word .number {
+  font-size: 1.8rem;
+  color: #a1c3f4;
+  float: right;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item .line {
+  width: 100%;
+  height: 1rem;
+  background-color: #2b2b43;
+  position: relative;
+}
+.right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item .line .data_line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1rem;
+}
+.right_module .bottom_module .data_graph {
+  width: 78%;
+  height: 100%;
+  float: left;
+}
+.right_module .bottom_module .data_graph .pie_chart {
+  width: 100%;
+  height: 60%;
+  box-sizing: border-box;
+  background-color: rgba(24, 19, 39, 0.8);
+  border: 2px solid #2e2749;
+  padding: 2.6rem 0;
+  overflow: hidden;
+  margin-bottom: 2%;
+}
+.right_module .bottom_module .data_graph .pie_chart .left {
+  width: 33.33%;
+  height: 100%;
+  border-right: 3px solid #504a58;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  padding-top: 10rem;
+}
+.right_module .bottom_module .data_graph .pie_chart .left .data_title {
+  font-size: 2.8rem;
+  color: #a1c3f4;
+  margin-bottom: 2.2rem;
+}
+.right_module .bottom_module .data_graph .pie_chart .left .number {
+  font-size: 5.6rem;
+  color: #ffffff;
+}
+.right_module .bottom_module .data_graph .pie_chart .right {
+  height: 100%;
+  width: 66.66%;
+  float: left;
+  box-sizing: border-box;
+}
+.right_module .bottom_module .data_graph .line_chart {
+  width: 100%;
+  height: 38%;
+  box-sizing: border-box;
+  background-color: rgba(24, 19, 39, 0.8);
+  border: 2px solid #2e2749;
+  padding: 2.6rem 0;
+  overflow: hidden;
+}
+@media screen and (max-width:1366px) {
+  .right_module .top_module .abnormal_detection .top_detection .title{
+    margin-bottom: 0.5rem;
+  }
+  .right_module .top_module .abnormal_detection .top_detection .the_number{
+    margin-bottom: 0.5rem;
+  }
+  .right_module .top_module .abnormal_detection .top_detection .inspection_category{
+    margin-bottom: 1.2rem;
+  }
+  .right_module .top_module .abnormal_detection .top_detection .name_desc{
+    margin-bottom: 1rem;
+  }
+ .right_module .bottom_module .traceability_data .data_left .sub_title {
+    margin-bottom: 3rem;
+  }
+  .right_module .bottom_module .traceability_data .data_left .accumulated_data {
+    margin-bottom: 2.5rem;
+  }
+  .right_module .bottom_module .traceability_data .data_left .data_classification .class_title {
+    margin-bottom: 2rem;
+  }
+  .right_module .bottom_module .traceability_data .data_left .data_classification .data_list .data_item {
+    margin-bottom: 3.5rem;
+  }
+  .right_module .bottom_module .data_graph .pie_chart .left {
+    padding-top: 10rem;
+  }
+}
+

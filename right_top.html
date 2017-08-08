@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--清除样式-->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <!--主要样式-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <title>溯源数据</title>
+</head>
+
+<body>
+    <div class="right_module">
+        <!--上部分-->
+        <div class="top_module">
+            <div class="test_data">
+                <!--右上角累计检测数据-->
+                <div class="accumulative_detection">
+                    <p class="name">累计检测批次</p>
+                    <p class="number"></p>
+                </div>
+                <!--数据部分-->
+                <div class="word_data">
+                    <h2 class="title">检测数据</h2>
+                    <h3 class="sub_title">智慧安鲜大数据中心</h3>
+                    <div class="data_today">
+                        <h2 class="title">今日数据</h2>
+                        <div class="data_wrapper">
+                            <ul class="data_list">
+                                <li class="data_item batch">
+                                    <p class="number"></p>
+                                    <p class="name">检测批次</p>
+                                </li>
+                                <li class="data_item varieties">
+                                    <p class="number"></p>
+                                    <p class="name">检测品种</p>
+                                </li>
+                                <li class="data_item business">
+                                    <p class="number"></p>
+                                    <p class="name">检测商家</p>
+                                </li>
+                            </ul>
+                            <div class="qualified_rate">
+                                <div class="qualified_rate_wrapper" id="qualifiedRate"></div>
+                                <span class="text"><span class="number">0</span>%<br/>合格率</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--图表部分-->
+                 <div class="data_chart" id="dataChart"></div>
+            </div>
+            <div class="abnormal_detection">
+                <!--近日检测异常数文字数字信息-->
+                <div class="top_detection">
+                    <h2 class="title">今日检测异常数</h2>
+                    <p class="the_number"><span class="number">0</span>条</p>
+                    <div class="inspection_category">
+                        <p class="name"></p>
+                        <p class="desc"></p>
+                    </div>
+                    <div class="name_desc detection_dw">
+                        <p class="name">检测单位</p>
+                        <p class="desc">辽宁智慧安鲜互联网有限公司</p>
+                    </div>
+                    <div class="name_desc test_item">
+                        <p class="name">检测项目</p>
+                        <p class="desc"></p>
+                    </div>
+                    <div class="name_desc detection_time">
+                        <p class="name">检测时间</p>
+                        <p class="desc"></p>
+                    </div>
+                    <!--检测人-->
+                    <div class="name_desc tester">
+                        <p class="name">检测人</p>
+                        <p class="desc"></p>
+                    </div>
+                </div>
+                <!--近日检测异常数表格数据-->
+                <div class="detection_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>序号</td>
+                                <td>时间</td>
+                                <td>残留值</td>
+                                <td>结果</td>
+                            </tr>                        
+                        </thead>
+                        <tbody>
+                            <!--<tr>
+                                <td class="serial_number">1</td>
+                                <td class="time">8:43</td>
+                                <td class="residual_value">57%</td>
+                                <td class="result unqualified">不合格</td>
+                            </tr>   
+                            <tr>
+                                <td class="serial_number">2</td>
+                                <td class="time">8:43</td>
+                                <td class="residual_value">57%</td>
+                                <td class="result unqualified">不合格</td>
+                            </tr>   
+                            <tr>
+                                <td class="serial_number">3</td>
+                                <td class="time">8:43</td>
+                                <td class="residual_value">57%</td>
+                                <td class="result unqualified">不合格</td>
+                            </tr>   
+                            <tr>
+                                <td class="serial_number">4</td>
+                                <td class="time">8:43</td>
+                                <td class="residual_value">57%</td>
+                                <td class="result unqualified">不合格</td>
+                            </tr>   
+                            <tr>
+                                <td class="serial_number">5</td>
+                                <td class="time">8:43</td>
+                                <td class="residual_value">57%</td>
+                                <td class="result unqualified">不合格</td>
+                            </tr>                        -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!--引入jq库-->
+<script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+<!--引入echart脚本-->
+<script src="./js/echarts.min.js"></script>
+<!--引入脚本-->
+<script src="./js/right_top.js"></script>
+</html>

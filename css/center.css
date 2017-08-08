@@ -1,0 +1,265 @@
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #f6f6f6;
+	font-family: "微软雅黑"
+}
+
+html {
+	width: 100%;
+	height: 100%
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background: url(../img/bg_box.jpg)
+}
+
+.wrapper .centerDiv {
+	width: 100%;
+	height: 100%;
+	padding: 20px 30px;
+	box-sizing: border-box
+}
+
+.wrapper .centerDiv .top {
+	width: 100%;
+	height: 25%
+}
+
+.wrapper .centerDiv .top .title {
+	float: left
+}
+
+.wrapper .centerDiv .top .title .toptitle {
+	color: #fff;
+	font-size: 16px;
+	text-align: left
+}
+
+.wrapper .centerDiv .top .title .small-title {
+	font-size: 14px;
+	color: #999;
+	padding-top: 5px
+}
+
+.wrapper .centerDiv .top .topLogo {
+	float: right;
+	width: 157px;
+	height: 60px
+}
+
+.wrapper .centerDiv .top .topLogo img {
+	width: 100%;
+	height: 100%
+}
+
+.wrapper .centerDiv .top .totalLit {
+	width: 100%;
+	float: left
+}
+
+.wrapper .centerDiv .top .totalLit .list {
+	width: 20%;
+	float: left;
+	padding-right: 54px;
+	box-sizing: border-box;
+	display: inline-block
+}
+
+.wrapper .centerDiv .top .totalLit .list .list-title {
+	font-size: 16px;
+	color: #fff;
+	border-bottom: 2px solid rgba(40,71,102,.6);
+	padding-bottom: 12px
+}
+
+.wrapper .centerDiv .top .totalLit .list .list-num span {
+	color: #fff;
+	font-size: 30px;
+	font-weight: 700
+}
+
+.wrapper .centerDiv .top .totalLit .list .list-sp span {
+	color: #00f
+}
+
+.wrapper .centerDiv .top .totalLit .list .list-sp span.home {
+	font-size: 20px
+}
+
+.wrapper .centerDiv .top .totalLit .list-special {
+	width: 12%;
+	height: 100px;
+	float: left;
+	display: inline-block
+}
+
+.wrapper .bootom {
+	width: 100%;
+	height: 75%
+}
+
+.wrapper .bootom .b-map {
+	width: 75%;
+	height: 100%;
+	padding-right: 30px;
+	box-sizing: border-box;
+	float: left;
+	display: inline-block;
+	color: #fff
+}
+
+.wrapper .bootom .b-map .b-title {
+	width: 100%;
+	height: 8%;
+	box-sizing: border-box;
+	font-size: 16px;
+	border-bottom: 2px solid rgba(40,71,102,.6);
+	padding-bottom: 12px
+}
+
+.wrapper .bootom .b-map .b-content {
+	width: 100%;
+	height: 92%
+}
+
+.wrapper .bootom .b-map .b-content .provice {
+	width: 100%;
+	height: 9%;
+	font-size: 20px;
+	padding: 12px 0;
+	box-sizing: border-box
+}
+
+.wrapper .bootom .b-map .b-content .b-list {
+	width: 28%;
+	height: 92%;
+	display: inline-block;
+	float: left;
+	padding-left: 10px;
+	box-sizing: border-box
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul {
+	height: 100%
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li {
+	width: 100%;
+	height: 10%;
+	border-bottom: 2px solid rgba(40,71,102,.6);
+	box-sizing: border-box
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li div {
+	display: inline-block;
+	float: left;
+	text-align: left
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .area {
+	width: 40%;
+	font-size: 14px;
+	margin-top: 8px
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .num {
+	width: 40%;
+	font-size: 20px;
+	text-align: right;
+	margin-top: 5px;
+	font-weight: 700
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .danwei {
+	font-size: 16px
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .point {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .blue {
+	background-color: #00f
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul li .red {
+	background-color: red
+}
+
+.wrapper .bootom .b-map .b-content .b-list ul .empty {
+	height: 100%;
+	width: 100%;
+	margin: 45% 30%;
+	font-size: 30px;
+    font-weight: bold;	
+	display: none
+}
+
+.wrapper .bootom .b-map .b-content .b-list-right {
+	float: right
+}
+
+.wrapper .bootom .b-body {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	font-size: 20px
+}
+
+.wrapper .bootom .b-body div {
+	display: inline-block;
+	float: left
+}
+
+.wrapper .bootom .b-body .bar {
+	height: 56%;
+	width: 100%;
+	border: 2px solid #201935;
+	box-sizing: border-box;
+	background-color: rgba(22,16,36,.8);
+	margin-bottom: 4%
+}
+
+.wrapper .bootom .b-body .bar div {
+	width: 100%;
+	height: 100%
+}
+
+.wrapper .bootom .b-body .line {
+	height: 38%;
+	width: 100%;
+	border: 2px solid #201935;
+	box-sizing: border-box;
+	background-color: rgba(22,16,36,.8);
+	margin-bottom: 2%
+}
+
+.wrapper .bootom .b-body .line div {
+	width: 100%;
+	height: 100%
+}
+
+.wrapper .bootom .b-body .bar .common, .wrapper .bootom .b-body .line .common {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin: 20% auto;
+    display: none;
+    position: relative;
+    top: -100%;
+    left: 0;
+    z-index: 10;
+    font-size: 28px;
+    font-weight: bold;
+}
